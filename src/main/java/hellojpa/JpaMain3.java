@@ -18,10 +18,10 @@ public class JpaMain3 {
 
         try{
 
-            Member findMember1 = em.find(Member.class, 101L);
-            Member findMember2 = em.find(Member.class, 101L);
+            Member2 findMember12 = em.find(Member2.class, 101L);
+            Member2 findMember22 = em.find(Member2.class, 101L);
 
-            System.out.println("result = " + (findMember1 == findMember2));
+            System.out.println("result = " + (findMember12 == findMember22));
 
             tx.commit();
         } catch (Exception e) {

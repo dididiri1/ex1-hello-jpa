@@ -4,8 +4,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import java.util.List;
 
-public class JpaMainDelete {
+public class JpaMain0 {
 
     public static void main(String[] args) {
 
@@ -18,12 +19,14 @@ public class JpaMainDelete {
 
         try{
 
-            Member2 findMember2 = em.find(Member2.class, 2L);
+            List<Member2> result = em.createQuery("select m from Member2 AS m", Member2.class)
+                    .setFirstResult(1)
+                    .setMaxResults(10)
+                    .getResultList();
 
-            em.remove(findMember2);
-
-            System.out.println("findMember.id = " + findMember2.getId());
-            System.out.println("findMember.name = " + findMember2.getName());
+            for (Member2 member2 : result) {
+                System.out.println("member.getName() = " + member2.getName());
+            }
 
             tx.commit();
         } catch (Exception e) {

@@ -18,11 +18,11 @@ public class JpaMainCreate {
 
         try{
 
-            Member member = new Member();
-            member.setId(2L);
-            member.setName("HelloA");
+            Member2 member2 = new Member2();
+            member2.setId(2L);
+            member2.setName("HelloA");
 
-            em.persist(member);
+            em.persist(member2);
 
             tx.commit();
         } catch (Exception e) {

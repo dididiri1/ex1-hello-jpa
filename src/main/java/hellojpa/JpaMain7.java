@@ -19,11 +19,11 @@ public class JpaMain7 {
         try{
 
             // 영속
-            Member member = em.find(Member.class, 150L);
-            member.setName("AAAAA");
+            Member2 member2 = em.find(Member2.class, 150L);
+            member2.setName("AAAAA");
 
             //em.detach(member); // 준영속성 상태
-            em.clear();
+            //em.clear();
 
             System.out.println("===================================");
 

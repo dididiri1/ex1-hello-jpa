@@ -19,8 +19,8 @@ public class JpaMain6 {
         try{
 
             // 영속
-            Member member = new Member(202L, "member200");
-            em.persist(member);
+            Member2 member2 = new Member2(202L, "member200");
+            em.persist(member2);
 
             //em.flush();
 

@@ -5,7 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-public class JpaMainDelete {
+public class JpaMain8 {
 
     public static void main(String[] args) {
 
@@ -18,12 +18,12 @@ public class JpaMainDelete {
 
         try{
 
-            Member2 findMember2 = em.find(Member2.class, 2L);
+            Member3 member = new Member3();
+            member.setId(1L);
+            member.setUsername("A");
+            member.setRoleType(RoleType.ADMIN);
 
-            em.remove(findMember2);
-
-            System.out.println("findMember.id = " + findMember2.getId());
-            System.out.println("findMember.name = " + findMember2.getName());
+            em.persist(member);
 
             tx.commit();
         } catch (Exception e) {

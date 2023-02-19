@@ -19,8 +19,8 @@ public class JpaMain5 {
         try{
 
             // 영속
-            Member member = em.find(Member.class, 150L);
-            member.setName("ZZZZZ");
+            Member2 member2 = em.find(Member2.class, 150L);
+            member2.setName("ZZZZZ");
 
             System.out.println("===================================");
 
